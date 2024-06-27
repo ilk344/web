@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head> 
+ <title>SWEET</title>
+  <link rel="stylesheet" href="CSS/maquetacionSweet.css">
+
+</head>
+<body>
+
+
+<center>
+
+
+  <header class="header"> 
+
+<a href="https://www.facebook.com/CBTIS258NL/?locale=es_LA"><img class="sombra2" src="imagenes/SWEET 2.png" alt="Eniun logo" width="210" height="200"></a>
+<nav>  
+      <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="RESETAS.HTML">Recetas</a></li>
+           <li><a href="informacion.html">Información</a></li>
+           <li><a href="Formulario.html">Registro</a></li>
+          </ul> 
+
+</nav>
+<!-- agregando audio en la etiqueta audio -->
+<section class="b_position">
+<button class="btn audio" name="button" onclick="Sonido()">
+    <img class="Musi-Off"style="width: 120px; height:120px;" src="imagenes/pause2.png">
+    <audio id="Audio-2">
+    </audio>
+</button>
+</section>
+</header>
+<script type="text/javascript">
+  let sound = true;
+
+let MiAudio = document.getElementById("Audio-2");
+
+function ChangeImgOn(){
+   document.querySelector(".Musi-Off").src="imagenes/pause2.png";
+}
+
+MiAudio.addEventListener('ended', ChangeImgOn);
+
+function Sonido(){
+   if(sound){
+      document.querySelector(".Musi-Off").src="imagenes/play2.png";
+      MiAudio.src="imagenes/Cancion.mp3"; 
+      MiAudio.volume = 0.7;
+      MiAudio.play(); 
+   }
+
+}
+</script>
+
+<style>
+  .b_position{
+    width: 300px;
+  }
+  btn{
+  color: black; 
+  padding: 14px 18px; 
+  cursor: pointer; 
+  }
+.audio {
+  background-color: transparent; 
+} 
+    .sombra2 {
+    border-radius: 290%;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
+}
+.banner{
+     width: 90%;
+    background:#EAECC6 ;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #2BC0E4, #EAECC6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #2BC0E4, #EAECC6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     text-align: center; /* Centra horizontalmente el contenido */
+    position: relative; /* Para alinear verticalmente */
+    height: 200px; 
+}
+article{
+    width: 90%;
+    height: 580vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #2BC0E4; 
+background: -webkit-linear-gradient(to bottom, #EAECC6, #2BC0E4);  
+background: linear-gradient(to bottom, #EAECC6, #2BC0E4); 
+
+}
+
+h3 {
+    display: inline;
+    position: relative;
+    font: 50px Helvetica, Sans-Serif;
+    letter-spacing: -5px;
+    color: rgba(0,0,255,0.5); 
+  }
+body{
+    background: url(imagenes/1_f.jfif);
+    background-repeat:repeat ;
+} 
+footer{
+        width: 100%;
+        position: relative;
+        min-height: 100%;
+ }
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #fcaccc;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.9rem;
+  color: rgb(0,0,255); 
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+ background: url("imagenes/p.p.png");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+.w{
+ width: 75px;
+ height: 68px;
+}
+
+.fondo3{
+  height: 20px;
+}
+.fondo{
+  color: white;
+  font-size: 29px;
+  width: 1060px;
+  height: 80px;
+ background: -webkit-linear-gradient(90deg, #83538c,#e30d82,#d24dbf);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(90deg, #83538c,#e30d82,#d24dbf);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+}
+a.otro {
+  background-color:#745ca4;
+  color:#f6d9bd;
+  padding: 8px;
+  text-decoration:none;
+}
+h1{
+  background-color:#745ca4;
+  color:#f6d9bd;
+  padding: 8px;
+  text-decoration:none;
+  font-size: 70px;
+}
+h6{
+  font-size: 100px;
+  }
+  *{font-family: arial; }
+div { margin: 15px; padding: 5px; }
+p {text-align: justify; margin:15px; border-style:solid;}
+img {margin:10px; float:left;}
+h2{
+  font-size: 56px;  
+        font-family: 'cursive';
+      color: rgba(255,0,0,0.5);
+      position: relative;
+  top: 0.5px;
+  left: 2px;
+    }
+    .title-container {
+    margin-top: 20px; /* Espacio superior para el título */
+  }
+  .sombra {
+    border-radius: 25px;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25);
+}
+</style>
+
+<center>
+<section class="banner">
+  <div class="title-container">
+  <br><br>
+<h6 style="text-align: center; margin-top: 0; font-family: Algerian; color: #3B0712; width:10px; height:260px;">. Recetas </h6>
+</div>
+<span class="fondo3">
+  <section class="fondo">
+<h1><a class="otro" href="#sec1">Paletas</a> <a class="otro" href="#sec2">Gomitas</a> <a class="otro" href="#sec5">Cocadas</a></h1>
+</section>
+</span>
+</section>
+<article>
+
+<h1><a name="sec1">Paletas</a></h1>
+<div>
+<h2>Paletas de Caramelo</h2>
+<section>
+  <h3>Ingredientes</h3>
+<img style="width: 290px; height:230px;" class="sombra" src="imagenes/7_f.jpg">
+
+<ul>
+  <li>1/2 taza de agua</li>
+  <li>1 taza de azúcar</li>
+  <li>1/3 de jarabe de maíz ligero</li>
+  <li>Termómetro de azúcar</li>
+  <li>Moldes de caramelo o una bandeja para hornear</li>
+  <li>Palitos de paletas de caramelo</li>
+  <li>Pasta colorante de alimentos (opcional)</li>
+  <li> Aceites aromatizantes (opcional)</li>
+</ul>
+<h3>Pasos a seguir</h3>
+
+<p>
+  <div align="justify">
+  <ol>
+
+<li> Engrasa o lubrica un poco los moldes de las paletas –o la bandeja para hornear– y coloca los palos en su lugar.</li>
+
+<li> Hierve el agua en la cacerola. Apaga el fuego y agrega el azúcar y el jarabe de maíz. Este último es un edulcorante que será el que aportará ese dulce y delicioso sabor a nuestras paletas de caramelo caseras.</li>
+
+<li>Enciende el fuego lento y revuelve lentamente para disolver todo el azúcar. Te recomendamos usar una cuchara o espátula de madera para ello.</li>
+
+<li>Coloca un termómetro en la cacerola y aumenta el calor del fogón. Deja que el dulce se cocine hasta que la temperatura alcance los 150 grados centígrados.</li>
+
+<li>Apaga el fuego, deja enfriar unos 5 grados, y agrega cualquier aceite aromatizante con colorante hasta que se mezclen.</li>
+
+<li>Vierte el caramelo. Deja reposar.</li>
+
+<li>Si utilizas una bandeja para hornear, vierte el dulce sobre los extremos de los palos, dejando distancia entre cada paleta de caramelo.</li>
+
+<li>Considera el aceite de canela o aceite de menta verde para dar sabor. Una vez que añades los colorantes y aromatizantes, trabaja con rapidez para que el caramelo no se endurezca antes de que lo viertas en los moldes.</li>
+</ol></div>
+</div>
+</section>
+<br><br>
+
+--------------------------------------------------------------------------------------------------
+
+<div>
+<h2>Paletas de Chocolate</h2>
+<section>
+  <h3>Ingredientes</h3>
+  <img style="width: 250px; height:156px;" class="sombra" src="imagenes/8_f.jpg">
+
+<ul>
+<li>100 gr. chocolate para postres. </li>
+
+<li>2 cdas mantequilla</li>
+</ul>
+
+<h3>Paso a seguir</h3>
+<div align="justify">
+<ol>
+ <li> Poner en un cazo al baño de María el chocolate troceado con la mantequilla.</li>
+
+  <li> Cuando esté fundido, verter la mezcla en los moldes para piruletas con la ayuda de una cuchara.</li>
+
+  <li> Dar unos golpecitos sobre el banco para que el chocolate se reparta de manera uniforme y no se formen burbujas.</li>
+
+<li> Dejar enfriar y meter en la nevera.</li>
+
+<li> Desmolda</li>
+</ol></div>
+</p>
+</div>
+</section>
+<br>
+
+--------------------------------------------------------------------------------------------------
+<div>
+<h2>Paleta Cristalizada</h2>
+<section>
+  <h3>Ingredientes</h3>
+  <img style="width: 290px; height:200px;" class="sombra" src="imagenes/9_f.jpg">
+<ul>
+  <li>Azúcar</li>
+  <li>Agua</li>
+  <li>Tubos de decoración</li>
+  
+</ul>
+<h3>Paso a paso</h3>
+<div align="justify"><ol>
+ <li> En un cazo, poner 5 o 6 cucharadas de azúcar y una cucharada de agua.</li>
+
+ <li>Cuando se forme el caramelo y empiece a dorarse, verter en los moldes de piruleta de silicona, con cuidado de no quemarnos y con la ayuda de una cuchara.</li>
+
+  <li>Dejar que se enfríe.</li>
+
+ <li> Poner en la nevera un rato y cuando estén completamente frías, desmoldar</li>
+</ol></div>
+</div>
+</section>
+<br>
+
+-----------------------------------------------------------------------------------------------
+
+<h1><a name="sec2">Gomitas</a></h1>
+<br>
+<div>
+<h2>Gomitas</h2>
+<img style="width: 250px; height:156px;" class="sombra" src="imagenes/10_f.jpg">
+<section>
+  <h3>Ingredientes</h3>
+<ul>
+  <li>20 gramos de Colapez o Gelatina sin sabor.</li>
+  <li>90 gramos de Gelatina del sabor al gusto.</li>
+  <li>200 gramos de Azúcar granulada.</li>
+  <li>250 mililitros de Agua</li>
+  <li>Azúcar para rebozar</li>
+</ul>
+
+<h3>Paso a seguir</h3>
+
+<div align="justify">
+  <li>El primer paso, disolver el colapez en el agua. para ello, coloca agua en una olla y calienta a fuego suave hasta que se disuelva.</li>
+
+<li> Una vez disuelta la gelatina sin sabor, agregar el azúcar y con una cuchara de palo mover para disolverlo completamente.</li>
+
+<li> Luego, agregar la gelatina del gusto que se ha elegido y disolverla. Si te animas a preparar golosinas de colores, puedes usar varios sabores de gelatina y hacer varias porciones distintas de gomitas.</li>
+
+<li> Continua removiendo la mezcla con la cuchara de madera para evitar que se formen grumos, es un importante que todos los ingredientes estén bien disueltos. Continua entonces con la cocción a fuego medio, durante unos 3 minutos aprox. hasta que dé un hervor.</li>
+
+<li> A continuación, vacía toda la mezcla de gelatina en un molde rectangular, previamente engrasado con unas gotas de aceite. Dejar en reposo hasta que la mezcla enfríe a temperatura ambiente. Esto puede tardar una hora aproximadamente.</li>
+
+<li> Una vez haya enfriado, reservamos en la nevera hasta que la gelatina termine de cuajar y solidifique. El tiempo mínimo de reposo es de 2 horas.</li>
+
+<li>Pasado este tiempo, sacamos el molde de la nevera y con ayuda de un cuchillo.</li>
+
+<li>Para formas las gomitas azucaradas, solo debemos cortar la lámina usando corta pastas con las formas que más les gusten.</li>
+
+<li> Finalmente, cubrir las gomitas con azúcar. Para ello, baña las piezas de gelatina en un bol con azúcar hasta cubrirlas bien, por arriba y abajo.</li>
+</ol></div>
+</div>
+</section>
+<br>
+  ------------------------------------------------------------------------------------------------------------------------
+
+<h1><a name="sec5">Cocadas</a></h1>
+<br>
+<div>
+<h2>Bandera de Coco</h2>
+<img style="width: 290px; height:230px;" class="sombra" src="imagenes/11_f.jpg">
+<p><h3>Ingredientes</h3>
+<ul>
+  <li>1 taza de coco rallado</li>
+  <li>1/2 taza de leche evaporada</li>
+  <li>1/4 taza de azúcar</li>
+  <li>1 cucharada de miel</li>
+  <li>Colorante vegetal verde y rojo</li>
+  
+</ul>
+<h3>Paso a seguir</h3>
+<div align="justify"><ol>
+<li> Coloca en tres ollas distintas la misma cantidad de azúcar, miel y el colorante. Debe ser un recipiente para la parte blanca, que no requerirá colorante, otra para la parte verde y otra para la roja.</li>
+    
+<li>Deja hervir y mueve constantemente para que no se queme. En cuanto comience a burbujear agrega el coco en partes iguales para que espese.</li>
+    
+<li> Deja enfriar por completo y toma pequeñas porciones para formar l. </li>
+</ol></div>
+</p>
+</div>
+
+</article>
+
+ <footer class="footer">
+                    <div class="waves">
+                      <div class="wave" id="wave1"> </div>
+                      
+                    </div>
+                    <ul class="social-icon">
+                      <li class="social-icon__item"><a href="https://wa.me/528110075977/?text=tu%20texto%20personalizado" target="_blank"><img class="w" src="imagenes/wh.png"></a>
+                        </a></li>
+
+
+                    <ul class="menu">
+                      <li class="menu__item"><a class="menu__link" href="SWEET.html">Inicio</a></li>
+                      <li class="menu__item"><a class="menu__link" href="Recetas.html">Recetas</a></li>
+                      <li class="menu__item"><a class="menu__link" href="informacion.html">Informacion</a></li>
+                      <li class="menu__item"><a class="menu__link" href="Formulario.html">Registro</a></li>
+                      <li class="menu__item"><a class="menu__link" href="mailto:yeimi.mata.alp@cbtis258.edu.mx">Contacto</a></li>
+                    <br>
+                    <p>&copy;2024 | All Rights Reserved</p>
+                  </footer>
+                </script>
+
+   
+   <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+   <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+</center>
+</body>
+<html>
